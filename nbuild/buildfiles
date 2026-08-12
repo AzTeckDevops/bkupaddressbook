@@ -11,8 +11,8 @@ maven "mymaven"
         }
 stage('Deploy') {
             steps {
-               sshagent(credentials: ['jentomcat'], executable: '') {
-  sh "scp -o StrictHostKeyChecking=no target/*.war ansadmin@98.89.38.103/home/ansadmin/tomcat/webapps"  
+               sshagent(credentials: ['jenmaven'], executable: '') {
+  sh "scp -o StrictHostKeyChecking=no target/*.war ansadmin@98.89.38.103:/home/ansadmin/tomcat/webapps"  
 }
             }
         }
